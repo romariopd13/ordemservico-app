@@ -1,0 +1,9 @@
+.titulo-painel {
+    border-bottom: 1px solid;
+    /* color: #4aa28f; */
+    margin-bottom: 20px;
+}
+h1{
+    margin: 15px 0;
+    font-weight: 600;
+}

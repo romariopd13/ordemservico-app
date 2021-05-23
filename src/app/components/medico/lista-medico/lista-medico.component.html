@@ -1,0 +1,10 @@
+<app-title titulo="Médicos"></app-title>
+<mat-list>
+    <div mat-subheader>Lista de médicos</div>
+    <mat-list-item *ngFor="let medico of medicos">
+        <mat-icon mat-list-icon>medical_services</mat-icon>
+        <div mat-line>{{medico.nome}}</div>
+        <div mat-line> {{medico.especialidade | titlecase}} </div>
+        <mat-divider></mat-divider>
+    </mat-list-item>
+</mat-list>

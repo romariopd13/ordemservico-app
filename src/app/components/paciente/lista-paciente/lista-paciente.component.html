@@ -1,0 +1,11 @@
+<app-title titulo="Pacientes"></app-title>
+<mat-list>
+    <div mat-subheader>Lista de pacientes</div>
+    <mat-list-item *ngFor="let paciente of pacientes">
+        <mat-icon mat-list-icon>account_circle</mat-icon>
+        <div mat-line>{{paciente.nome}}</div>
+        <div mat-line> {{paciente.sexo}} | {{paciente.nascimento | date: "dd/MM/yyyy"}}</div>
+        <div mat-line> {{paciente.endereco}} </div>
+        <mat-divider></mat-divider>
+    </mat-list-item>
+</mat-list>

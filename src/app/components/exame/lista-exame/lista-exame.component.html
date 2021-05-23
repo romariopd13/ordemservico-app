@@ -1,0 +1,10 @@
+<app-title titulo="Exames"></app-title>
+<mat-list>
+    <div mat-subheader>Lista de exames.</div>
+    <mat-list-item *ngFor="let exame of exames">
+        <mat-icon mat-list-icon>folder</mat-icon>
+        <div mat-line>{{exame.descricao}}</div>
+        <div mat-line> {{exame.preco | currency: "BRL"}} </div>
+        <mat-divider></mat-divider>
+    </mat-list-item>
+</mat-list>

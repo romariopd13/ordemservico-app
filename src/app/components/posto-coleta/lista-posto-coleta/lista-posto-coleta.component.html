@@ -1,0 +1,10 @@
+<app-title titulo="Postos de Coletas"></app-title>
+<mat-list>
+    <div mat-subheader>Lista de Postos de coletas</div>
+    <mat-list-item *ngFor="let posto of postos">
+        <mat-icon mat-list-icon>home</mat-icon>
+        <div mat-line>{{posto.descricao}}</div>
+        <div mat-line> {{posto.endereco}} </div>
+        <mat-divider></mat-divider>
+    </mat-list-item>
+</mat-list>

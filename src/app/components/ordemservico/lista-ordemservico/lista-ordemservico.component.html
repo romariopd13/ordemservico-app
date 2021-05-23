@@ -1,0 +1,19 @@
+<app-title titulo="Ordens de Serviços"></app-title>
+<button mat-flat-button color="primary" (click)="openDialog()">Nova OS</button>
+<mat-list>
+    <div mat-subheader>Lista de Ordens de Serviços</div>
+    <mat-list-item *ngFor="let ordem of ordens">
+        <mat-icon mat-list-icon>medical_services</mat-icon>
+        <div mat-line><strong>{{ordem.paciente_id?.nome}}</strong> - {{ordem.data | date: "dd/MM/yyyy"}}</div>
+        <div mat-line>Convênio: <strong>{{ordem.convenio}}</strong></div>
+        <div mat-line>Médico: <strong>{{ordem.medico_id?.nome}}</strong></div>
+        <div mat-line>Posto: <strong>{{ordem.postocoleta_id?.descricao}} ({{ordem.postocoleta_id?.endereco}})</strong>
+        </div>
+        <div md-line>
+            <mat-icon mat-list-icon (click)="openDialog(ordem)" style="cursor: pointer; color: #f0ad4e;">edit</mat-icon>
+            <mat-icon mat-list-icon (click)="apagarOS(ordem)" style="cursor: pointer; color: #d9534f;">delete</mat-icon>
+        </div>
+
+        <mat-divider></mat-divider>
+    </mat-list-item>
+</mat-list>
